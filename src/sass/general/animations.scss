@@ -1,0 +1,22 @@
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+
+@keyframes autofill {
+  to {
+    color: inherit;
+    background: $white-40;
+  }
+}
+
+.form__input:-webkit-autofill {
+  animation-name: autofill;
+  animation-fill-mode: both;
+}
