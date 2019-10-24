@@ -8,7 +8,6 @@
   border: none;
   outline: none;
   text-decoration: none;
-  @include font-xs-sb;
   vertical-align: top;
   text-align: center;
   letter-spacing: 1.5px;
@@ -18,19 +17,6 @@
 
   &:hover {
     transition: all 0.3s ease-in-out;
-  }
-
-  &--confirm {
-    padding-top: 25px;
-    padding-right: 120px;
-    padding-bottom: 25px;
-    padding-left: 120px;
-    background-color: $blue;
-
-    &:hover {
-      background-color: $gold;
-      color: $black;
-    }
   }
 
   &--burger {

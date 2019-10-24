@@ -1,0 +1,24 @@
+.user-acc {
+  position: relative;
+  padding-right: 36px;
+  @include font-small;
+
+  &::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 26px;
+    height: 34px;
+    background-image: url("../../img/icon-user.svg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &:hover {
+    color: $tomato;
+    transition: color 0.3s ease-in-out;
+  }
+}

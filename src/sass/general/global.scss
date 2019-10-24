@@ -14,7 +14,7 @@ html {
   font-size: $font-main;
 
   @include desktop-only {
-    font-size: size-desktop($font-main);
+    font-size: $font-main;
   }
 }
 
@@ -26,10 +26,10 @@ body {
   padding: 0;
 
   @include font-xs;
-  font-family: $ms-regular;
+  font-family: $sfui-reg;
   font-weight: 400;
-  color: $white;
-  background-color: $black;
+  color: $grey;
+  background-color: $white;
 }
 
 .visually-hidden {
@@ -45,14 +45,14 @@ body {
 
 .container {
   width: 100%;
-  max-width: 1390px;
+  max-width: 1640px;
   margin-left: auto;
   margin-right: auto;
   box-sizing: border-box;
-  padding: 0 size-desktop(39px);
+  padding: 0 140px;
 
   @include tablet-small {
-    padding: 0 39px;
+    padding: 0 105px;
   }
 
   @include mobile {

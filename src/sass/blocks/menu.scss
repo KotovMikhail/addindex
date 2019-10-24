@@ -1,6 +1,6 @@
 .menu {
-  width: 39.1vw;
-  max-width: 600px;
+  width: 100%;
+  max-width: 100%;
 
   &__list {
     display: flex;
@@ -11,13 +11,15 @@
 
   &__link {
     display: block;
-    @include font-xs-sb;
     letter-spacing: 0.5px;
-    transition: all 0.3s ease-in-out;
+    @include font-small;
+    border-bottom: 1px solid transparent;
+    transition: color,border 0.3s ease-in-out;
 
     &:hover {
-      color: $gold;
-      transition: all 0.3s ease-in-out;
+      color: $tomato;
+      transition: color, border 0.3s ease-in-out;
+      border-bottom: 1px solid $tomato;
     }
   }
 }
