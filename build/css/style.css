@@ -1214,7 +1214,7 @@ body {
           transform: translateY(-50%);
   width: 26px;
   height: 26px;
-  background-image: url("../../img/icon-search.svg");
+  background-image: url("../img/icon-search.svg");
   background-position: 0 0;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1495,7 +1495,7 @@ body {
           transform: translateY(-50%);
   width: 26px;
   height: 34px;
-  background-image: url("../../img/icon-user.svg");
+  background-image: url("../img/icon-user.svg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
