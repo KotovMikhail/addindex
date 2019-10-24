@@ -1,6 +1,11 @@
 .header {
+  position: relative;
   background-color: $white;
   box-shadow: 0px 77px 90px 0px rgba(119, 142, 162, 0.2);
+
+  @include mobile {
+    background-color: $tomato;
+  }
 
   &__top {
     display: flex;
@@ -10,9 +15,49 @@
     padding-top: 80px;
     padding-bottom: 65px;
     background-color: $white;
+
+    @include mobile {
+      background-color: $tomato;
+    }
   }
 
   &__menu {
     margin-top: 70px;
+  }
+
+  &__logo {
+    @include desktop-sm {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 45px;
+      padding-bottom: 45px;
+      order: 0;
+      width: 100%;
+      border-bottom: 1px solid $tomato;
+
+      @include mobile {
+        background-color: $tomato;
+        border-bottom: 1px solid $white;
+      }
+    }
+  }
+
+  &__form {
+    @include desktop-sm {
+      order: 1;
+    }
+  }
+
+  &__burger {
+    @include desktop-sm {
+      order: 2;
+    }
+  }
+
+  &__user-acc {
+    @include desktop-sm {
+      order: 3;
+    }
   }
 }

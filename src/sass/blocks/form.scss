@@ -10,34 +10,50 @@
 
     &--search {
       width: 100%;
-      max-width: 300px;
+      max-width: 245px;
       min-height: 42px;
       padding-left: 40px;
       @include font-small;
+
+      @include mobile {
+        max-width: 150px;
+        padding-left: 0;
+        background-color: $tomato;
+        color: $white;
+      }
     }
 
     &::placeholder {
       @include font-small;
       color: $grey;
+
+      @include mobile {
+        color: $white;
+      }
     }
   }
 
   &__label {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-    width: 26px;
-    height: 26px;
-    background-image: url("../../img/icon-search.svg");
-    background-position: 0 0;
-    background-repeat: no-repeat;
-    background-size: cover;
-    font-size: 0;
-    border: none;
     cursor: pointer;
 
     &--search {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      width: 26px;
+      height: 26px;
+      background-image: url("../../img/icon-search.svg");
+      background-position: 0 0;
+      background-repeat: no-repeat;
+      background-size: cover;
+      font-size: 0;
+      border: none;
+
+      @include mobile {
+        color: $white;
+        background: none;
+      }
     }
   }
 }

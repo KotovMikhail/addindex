@@ -51,7 +51,7 @@ body {
   box-sizing: border-box;
   padding: 0 140px;
 
-  @include tablet-small {
+  @include tablet {
     padding: 0 105px;
   }
 

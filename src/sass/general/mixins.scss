@@ -4,6 +4,12 @@
   }
 }
 
+@mixin desktop-sm {
+  @media (max-width: $width-laptop-sm - 1px) {
+    @content;
+  }
+}
+
 @mixin tablet {
   @media (max-width: $width-laptop - 1px) {
     @content;

@@ -2,6 +2,11 @@
   width: 100%;
   max-width: 100%;
 
+  @include desktop-sm {
+    display: none;
+    opacity: 0;
+  }
+
   &__list {
     display: flex;
     @include list-reset;
@@ -14,12 +19,90 @@
     letter-spacing: 0.5px;
     @include font-small;
     border-bottom: 1px solid transparent;
-    transition: color,border 0.3s ease-in-out;
+    transition: color, border 0.3s ease-in-out;
 
     &:hover {
       color: $tomato;
       transition: color, border 0.3s ease-in-out;
       border-bottom: 1px solid $tomato;
     }
+
+    @include mobile {
+      &:hover {
+        color: $white;
+      }
+      border-bottom: none;
+      color: $white;
+    }
+  }
+}
+
+.menu-opened {
+      transition: all 0.3s ease-in-out;
+  & .header__burger span {
+    opacity: 0;
+  }
+
+  & .header__burger::before {
+    width: 100%;
+    right: 0;
+    top: 20px;
+    transform: rotate(-45deg);
+  }
+
+  & .header__burger::after {
+    width: 100%;
+    top: 20px;
+    right: 0;
+    transform: rotate(45deg);
+  }
+
+  & .header__menu {
+    display: block;
+    position: absolute;
+    opacity: 1;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $white-80;
+    transition: all 0.3s ease-in-out;
+
+    @include mobile {
+      background-color: $tomato-80;
+    }
+  }
+
+  & .menu__list {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 767px;
+    margin: 0 auto;
+    padding-top: 10px;
+    transition: all 0.3s ease-in-out;
+
+    @include mobile {
+      padding-left: 15px;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      box-sizing: border-box;
+    }
+  }
+
+  & .menu__item {
+    margin-bottom: 4px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  & .menu__link {
+    font-size: 16px;
   }
 }

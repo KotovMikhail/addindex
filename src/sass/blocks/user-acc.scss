@@ -2,6 +2,12 @@
   position: relative;
   padding-right: 36px;
   @include font-small;
+  box-sizing: border-box;
+
+  @include mobile {
+    padding-right: 0;
+    color: $white;
+  }
 
   &::before {
     content: "";
@@ -15,10 +21,20 @@
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
+
+    @include mobile {
+      content: none;
+    }
   }
 
   &:hover {
     color: $tomato;
     transition: color 0.3s ease-in-out;
+
+    @include mobile {
+      &:hover {
+        color: $white;
+      }
+    }
   }
 }
